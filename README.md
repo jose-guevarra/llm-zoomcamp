@@ -48,8 +48,10 @@ You can follow the course at your own pace:
 - OpenAI API and text search with Elasticsearch
 
 #### [Module 2: Vector Search](02-vector-search/)
+
 - Vector search and embeddings
 - Indexing and retrieving data efficiently
+- Using Qdrant as the vestor database
 
 #### [Module 3: Evaluation](03-evaluation/)
 
@@ -93,6 +95,12 @@ A special thanks to our course sponsors for making this initiative possible!
 <p align="center">
   <a href="https://arize.com/">
     <img height="120" src="https://datatalks.club/images/partners/arize.png">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://qdrant.tech/">
+    <img height="120" src="images/qdrant.png">
   </a>
 </p>
 
