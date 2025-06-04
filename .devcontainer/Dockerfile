@@ -6,6 +6,7 @@ ARG PYVER="3.11"
 
 # Add path to pipenv
 ENV PIPENV_VENV_IN_PROJECT=1
+ENV PIPENV_VERBOSITY=-1
 
 # These settings prevent a timezone prompt when Python installs
 # Use this article to find your time zone (TZ):
