@@ -15,7 +15,7 @@ ENV TZ=America/Los_Angeles \
 DEBIAN_FRONTEND=noninteractive
 
 
-RUN dnf update -y && yum install -y sudo vim git unzip make wget \
+RUN dnf update -y && yum install -y sudo vim git unzip make wget procps \
     python3-pip python3.11 python3.11-pip glibc-langpack-en
 
 
