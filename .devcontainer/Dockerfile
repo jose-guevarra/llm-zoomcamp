@@ -23,8 +23,8 @@ ENV TZ=America/Los_Angeles \
     DEBIAN_FRONTEND=noninteractive
 
 
-RUN dnf update -y && dnf install -y sudo vim git unzip make wget \
-    glibc-langpack-en
+RUN dnf update -y && dnf install -y sudo vim git unzip make wget
+#glibc-langpack-en
 
 
 # User setup
