@@ -11,24 +11,17 @@ verify_ssl = true
 
 [packages]
 "boto3" = "*"
-#"httpx" = "*"
+"elasticsearch" = "*"
 "ipykernel" = "*"
 "jupyter" = "*"
-#"matplotlib" = "*"
 "numpy" = "*"
+"openai" = "*"
 "pandas" = "*"
-#"pyarrow" = "*"
 "python-dotenv" = "*"
 "scikit-learn" = "*"
-#"seaborn" = "*"
 "tqdm" = "*"
-"openai" = "*"
-"elasticsearch" = "*"
 
-#"mlflow" = "*"
-#"hyperopt" = "*"
-#"xgboost" = "*"
-#"fastparquet" = "*"
+
 
 [requires]
 python_version = "3.11"
