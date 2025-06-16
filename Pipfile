@@ -11,13 +11,15 @@ verify_ssl = true
 
 [packages]
 "boto3" = "*"
-"elasticsearch" = "*"
+"elasticsearch" = "<9.0"
 "ipykernel" = "*"
 "jupyter" = "*"
+"minsearch" = "*"
 "numpy" = "*"
 "openai" = "*"
 "pandas" = "*"
 "python-dotenv" = "*"
+"requests" = "*"
 "scikit-learn" = "*"
 "tqdm" = "*"
 
