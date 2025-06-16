@@ -10,6 +10,7 @@ verify_ssl = true
 "pytest-cov" = {index = "pypi", version = "*"}
 
 [packages]
+"appnope" = "*"
 "boto3" = "*"
 "elasticsearch" = "<9.0"
 "ipykernel" = "*"
