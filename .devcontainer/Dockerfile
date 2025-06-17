@@ -1,33 +1,20 @@
 FROM public.ecr.aws/amazonlinux/amazonlinux:latest
 
-
-
-# Install devel packages
-RUN dnf update && dnf install -y sudo vim git unzip make wget glibc-langpack-en
-
-# Python Install
-# Define the version of Python to install
-# For example "3.11" will get the latest version of 3.11 (ex 3.11.4, 3.11.5, etc)
-ARG PYVER="3.11"
-
-RUN dnf install -y python3-pip python$PYVER python$PYVER-pip && dnf clean all
-
-# Set PYVER as the default Python interpreter
-RUN pip$PYVER install pipenv
-RUN update-alternatives --install /usr/bin/python3 python /usr/bin/python$PYVER 1
-RUN update-alternatives --set python /usr/bin/python$PYVER
-RUN update-alternatives --set python /usr/bin/python$PYVER
-
-# Use venv dir local to Pipfile
+# Add path to pipenv
 ENV PIPENV_VENV_IN_PROJECT=1
 ENV PIPENV_VERBOSITY=-1
 
+RUN dnf update -y \
+    && dnf install -y sudo vim unzip tar git make wget glibc-langpack-en procps
 
-# User setup
-ARG REMOTE_USER=dockeruser
+RUN dnf install -y python3-pip git python3.11 python3.11-pip
 
-RUN /usr/sbin/groupadd -r sudo \
-    && /usr/sbin/useradd -rm -d /workspaces -s /bin/bash -g sudo -u 1001 $REMOTE_USER \
-    && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN pip3.11 install pipenv
+
+
+# create remote user to wheel group, then allow passwordless sudo for wheel group
+ENV REMOTE_USER="apprunner"
+RUN /usr/sbin/adduser -rm -d /workspaces -s /bin/bash -g wheel -u 1001 $REMOTE_USER \
+    && echo '%wheel ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 USER $REMOTE_USER
