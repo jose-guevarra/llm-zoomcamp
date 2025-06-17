@@ -2,11 +2,11 @@
     "build": {
         "dockerfile": "Dockerfile",
         "context": "..",
-        "args": {
-            "REMOTE_USER": "${localEnv:USER}"
+        "containerEnv": {
+            //"REMOTE_USER": "${localEnv:USER}"
         }
     },
-    "remoteUser": "${localEnv:USER}",
+    "remoteUser": "apprunner",
     "workspaceMount": "source=projects,target=/workspaces,type=volume",
     "workspaceFolder": "/workspaces",
     "customizations": {
