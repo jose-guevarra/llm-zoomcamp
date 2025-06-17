@@ -20,8 +20,7 @@ ENV PIPENV_VERBOSITY=-1
 
 
 # Install devel packages
-RUN dnf install -y sudo vim git unzip make wget \
-&& dnf clean all
+RUN dnf install -y sudo vim git unzip make wget 
 
 
 # User setup
