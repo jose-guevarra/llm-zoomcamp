@@ -20,6 +20,7 @@ verify_ssl = true
 "openai" = "*"
 "pandas" = "*"
 "python-dotenv" = "*"
+"qdrant-client[fastembed]" = ">=1.14.2"
 "requests" = "*"
 "scikit-learn" = "*"
 "tqdm" = "*"
