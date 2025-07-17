@@ -12,6 +12,7 @@ verify_ssl = true
 [packages]
 "appnope" = "*"
 "boto3" = "*"
+"dlt[qdrant]" = "*"
 "elasticsearch" = "<9.0"
 "ipykernel" = "*"
 "jupyter" = "*"
