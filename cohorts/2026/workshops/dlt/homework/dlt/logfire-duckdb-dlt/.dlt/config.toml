@@ -1,0 +1,17 @@
+[project]
+name = "logfire-duckdb-dlt"
+description = "A DLT project to ingest data from Logfire and save it to DuckDB."
+version = "0.1.0"
+
+[pipeline]
+name = "logfire_to_duckdb"
+description = "Pipeline to ingest data from Logfire and store it in DuckDB."
+source = "logfire"
+destination = "duckdb"
+
+[logfire]
+api_url = "https://api.logfire.com/v1/data"
+api_key = ""
+
+[duckdb]
+database_path = "local_duckdb.db"

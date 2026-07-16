@@ -1,0 +1,6 @@
+dlt
+duckdb
+logfire
+requests
+pandas
+python-dotenv
